@@ -16,6 +16,7 @@ import Cmenu from '@/components/Menu/index'
 const router = useRouter()
 const routes = computed(() => {
   const filterRoutes = filterRouters(router.getRoutes())
+  console.log(generateMenus(filterRoutes))
   return generateMenus(filterRoutes)
 })
 </script>

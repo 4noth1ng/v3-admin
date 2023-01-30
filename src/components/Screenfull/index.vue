@@ -1,7 +1,10 @@
 <template>
-    <div @click="onToggle()">
-        <svg-icon :icon="isFullscreen ? 'exit-fullscreen' : 'fullscreen'" />
-    </div>
+  <div @click="onToggle()">
+    <svg-icon
+      :icon="isFullscreen ? 'exit-fullscreen' : 'fullscreen'"
+      id="guide-full"
+    />
+  </div>
 </template>
 
 <script setup>
@@ -14,25 +17,23 @@ const isFullscreen = ref(false)
 
 // 监听变化
 const change = () => {
-    isFullscreen.value = screenfull.isFullscreen
+  isFullscreen.value = screenfull.isFullscreen
 }
 
 // 切换事件
 const onToggle = () => {
-    screenfull.toggle()
+  screenfull.toggle()
 }
 
 // 设置侦听器
 onMounted(() => {
-    screenfull.on('change', change)
+  screenfull.on('change', change)
 })
 
 // 删除侦听器
 onUnmounted(() => {
-    screenfull.off('change', change)
+  screenfull.off('change', change)
 })
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

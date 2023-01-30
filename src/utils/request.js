@@ -3,7 +3,8 @@ import axios from 'axios'
 import { ElMessage } from 'element-plus'
 
 const service = axios.create({
-  baseURL: 'https://mock.presstime.cn/mock/63bd227893fe9a069dc940f1/api',
+  baseURL:
+    'https://www.fastmock.site/mock/e20205c2cb7aae02dbeb7d1c3cf4ebed/api',
   timeout: 5000
 })
 
@@ -12,6 +13,8 @@ service.interceptors.request.use(
     if (store.getters.token) {
       config.headers.Authorization = `Bearer ${store.getters.token}`
     }
+    // 配置接口国际化
+    config.headers['Accept-Language'] = store.getters.language
     return config
   },
   (error) => {

@@ -1,12 +1,19 @@
 <template>
   <div class="navbar">
-    <hamburger class="hamburger-container" />
-    <breadcrumb class="breadcrumb-container" />
+    <hamburger class="hamburger-container" id="guide-hamburger" />
+    <breadcrumb class="breadcrumb-container" id="guide-breadcrumb" />
     <div class="right-menu">
-      <header-search class="right-menu-item hover-effect"></header-search>
-      <screenfull class="right-menu-item hover-effect" />
-      <theme-picker class="right-menu-item hover-effect"></theme-picker>
-      <lang-select class="right-menu-item hover-effect" />
+      <guide class="right-menu-item hover-effect" id="guide-start" />
+      <header-search
+        class="right-menu-item hover-effect"
+        id="guide-search"
+      ></header-search>
+      <screenfull class="right-menu-item hover-effect" id="guide-full" />
+      <theme-picker
+        class="right-menu-item hover-effect"
+        id="guide-theme"
+      ></theme-picker>
+      <lang-select class="right-menu-item hover-effect" id="guide-lang" />
       <!-- 头像 -->
       <el-dropdown
         class="avatar-container right-menu-item hover-effect"
@@ -47,6 +54,7 @@ import LangSelect from '@/components/LangSelect'
 import ThemePicker from '@/components/ThemeSelect/index.vue'
 import HeaderSearch from '@/components/HeaderSearch'
 import Screenfull from '@/components/Screenfull'
+import Guide from '@/components/Guide'
 const store = useStore()
 const logout = () => {
   store.dispatch('user/logout')

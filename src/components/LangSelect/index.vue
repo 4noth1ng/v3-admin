@@ -6,7 +6,7 @@
   >
     <div>
       <el-tooltip :content="$t('msg.navBar.lang')" :effect="effect">
-        <div><svg-icon icon="language" /></div>
+        <div><svg-icon icon="language" id="guide-lang" /></div>
       </el-tooltip>
     </div>
     <template #dropdown>

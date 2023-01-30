@@ -82,6 +82,9 @@ export default {
     sidebarTitle: '菜单',
     sidebarDesc: '项目功能菜单'
   },
+  author: {
+    link: '我的链接'
+  },
   profile: {
     muted: '《vue3 改写 vue-element-admin，实现后台前端综合解决方案》项目演示',
     introduce: '介绍',

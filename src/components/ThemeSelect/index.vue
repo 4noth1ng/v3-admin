@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <!-- 主题图标  
     v-bind：https://v3.cn.vuejs.org/api/instance-properties.html#attrs -->
     <el-dropdown
@@ -10,7 +10,13 @@
     >
       <div>
         <el-tooltip :content="$t('msg.navBar.themeChange')">
-          <svg-icon icon="change-theme" />
+          <div>
+            <svg-icon
+              icon="change-theme"
+              id="guide-theme"
+              class="changetheme"
+            />
+          </div>
         </el-tooltip>
       </div>
       <template #dropdown>
@@ -38,4 +44,11 @@ const handleSetTheme = (command) => {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container {
+  :deep(.svg-icon) {
+    width: 18px;
+    height: 18px;
+  }
+}
+</style>
