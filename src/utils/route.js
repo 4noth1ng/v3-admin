@@ -1,4 +1,5 @@
 import path from 'path'
+import router from '@/router'
 
 /**
  * 返回所有子路由
@@ -39,6 +40,7 @@ function isNull(data) {
  */
 export function generateMenus(routes, basePath = '') {
   const result = []
+  let map = new Map()
   // 遍历路由表
   routes.forEach((item) => {
     // 不存在 children && 不存在 meta 直接 return
@@ -61,8 +63,16 @@ export function generateMenus(routes, basePath = '') {
     // icon 与 title 必须全部存在
     if (item.meta.icon && item.meta.title) {
       // meta 存在生成 route 对象，放入 arr
-      result.push(route)
+      if (map.has(route.path)) return
+      else {
+        result.push(route)
+        map.set(route.path, route)
+      }
     }
   })
   return result
+}
+
+export const resetRouter = () => {
+  router.removeRoute('article')
 }

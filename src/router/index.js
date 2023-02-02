@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, useRouter } from 'vue-router'
 import layout from '@/layout'
 import ArticleCreaterRouter from './modules/ArticleCreate'
 import ArticleRouter from './modules/Article'
@@ -6,6 +6,8 @@ import PermissionListRouter from './modules/PermissionList'
 import RoleListRouter from './modules/RoleList'
 import UserManageRouter from './modules/UserManage'
 import store from '@/store'
+import { useStore } from 'vuex'
+import { cloneDeep } from 'lodash'
 export const asyncRoutes = [
   RoleListRouter,
   UserManageRouter,
@@ -13,21 +15,7 @@ export const asyncRoutes = [
   ArticleCreaterRouter,
   ArticleRouter
 ]
-/**
- * 初始化路由表
- */
-export const resetRouter = () => {
-  if (
-    store.getters.userInfo &&
-    store.getters.userInfo.permission &&
-    store.getters.userInfo.permission.menus
-  ) {
-    const menus = store.getters.userInfo.permission.menus
-    menus.forEach((menu) => {
-      router.removeRoute(menu)
-    })
-  }
-}
+
 /**
  * 私有路由表
  */
@@ -168,5 +156,18 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes: [...publicRoutes]
 })
-
+/**
+ * 初始化路由表
+ */
+export const resetRouter = () => {
+  if (
+    store.getters.userInfo &&
+    store.getters.userInfo.permission &&
+    store.getters.userInfo.permission.menus
+  ) {
+    router.removeRoute('article')
+    router.removeRoute('user')
+    router.removeRoute('404')
+  }
+}
 export default router

@@ -55,7 +55,9 @@ import ThemePicker from '@/components/ThemeSelect/index.vue'
 import HeaderSearch from '@/components/HeaderSearch'
 import Screenfull from '@/components/Screenfull'
 import Guide from '@/components/Guide'
+import { useRouter } from 'vue-router'
 const store = useStore()
+const router = useRouter()
 const logout = () => {
   store.dispatch('user/logout')
 }

@@ -1,5 +1,6 @@
 // 专门处理权限路由的模块
 import { publicRoutes, asyncRoutes } from '@/router'
+import { cloneDeep } from 'lodash'
 export default {
   namespaced: true,
   state: {
@@ -22,6 +23,8 @@ export default {
     filterRoutes(context, menus) {
       const routes = []
       // 路由权限匹配
+      const data = cloneDeep(asyncRoutes)
+      console.log('i make reload')
       menus.forEach((key) => {
         // 权限名 与 路由的 name 匹配
         const routeArr = asyncRoutes.filter((item) => item.meta.name === key)
@@ -30,10 +33,10 @@ export default {
       // 最后添加 不匹配路由进入 404
       routes.push({
         path: '/:catchAll(.*)',
-        redirect: '/404'
+        redirect: '/404',
+        name: '404'
       })
       let map = new Map()
-
       for (const route of routes) {
         if (map.has(route.path)) {
           let parentRoute = map.get(route.path)
@@ -46,9 +49,10 @@ export default {
           map.set(route.path, route)
         }
       }
+      console.log(map)
       const newRoute = [...map.values()]
-      console.log(newRoute)
       context.commit('setRoutes', newRoute)
+
       return newRoute
     }
   }

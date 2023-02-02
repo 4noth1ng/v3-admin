@@ -13,6 +13,7 @@ export default {
   children: [
     {
       path: '/user/role',
+      name: 'userRole',
       component: () => import('@/views/role-list/index'),
       meta: {
         title: 'roleList',

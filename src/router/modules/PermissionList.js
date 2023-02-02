@@ -9,6 +9,7 @@ export default {
   children: [
     {
       path: '/user/permission',
+      name: 'userPermission',
       component: () => import('@/views/permission-list/index'),
       meta: {
         title: 'permissionList',

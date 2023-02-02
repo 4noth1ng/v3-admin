@@ -106,7 +106,7 @@ const onReloadPage = () => {
   })
 }
 onMounted(() => {
-  onReloadPage()
+  // onReloadPage()
 })
 </script>
 

@@ -14,7 +14,7 @@
 import { watch } from 'vue'
 import { isTags } from '@/utils/tags'
 import { generateTitle, watchSwitchLang } from '@/utils/i18n'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 
 const route = useRoute()
@@ -71,6 +71,10 @@ watchSwitchLang(() => {
     })
   })
 })
+const router = useRouter()
+const test = () => {
+  console.log(router.getRoutes())
+}
 </script>
 
 <style lang="scss" scoped>

@@ -44,11 +44,11 @@ export default {
       context.commit('setUserInfo', data)
       return data
     },
-    logout() {
-      this.commit('user/setToken', '')
-      this.commit('user/setUserInfo', {})
-      removeAllItem()
+    logout(context) {
       resetRouter()
+      context.commit('setToken', '')
+      context.commit('setUserInfo', {})
+      removeAllItem()
       router.push('/login')
     }
   }

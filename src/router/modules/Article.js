@@ -10,6 +10,7 @@ export default {
     {
       path: '/article/ranking',
       component: () => import('@/views/article-ranking/index'),
+      name: 'articleRanking',
       meta: {
         title: 'articleRanking',
         icon: 'article-ranking'
@@ -17,6 +18,7 @@ export default {
     },
     {
       path: '/article/:id',
+      name: 'articleId',
       component: () => import('@/views/article-detail/index'),
       meta: {
         title: 'articleDetail'
