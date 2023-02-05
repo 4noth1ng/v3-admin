@@ -31,7 +31,19 @@ export default {
     articleRanking: 'ArticleRanking',
     articleCreate: 'ArticleCreate',
     articleDetail: 'ArticleDetail',
-    articleEditor: 'ArticleEditor'
+    articleEditor: 'ArticleEditor',
+    components: 'Components',
+    chooseIcon: 'ChooseIcon',
+    trend: 'Trend',
+    menu: 'Menu',
+    choosearea: 'ChooseArea',
+    choosecity: 'ChooseCity',
+    choosedate: 'ChooseDate',
+    choosetime: 'ChooseTime',
+    form: 'Form',
+    modalform: 'ModalForm',
+    progress: 'Progress',
+    dragabletable: 'DragableTable'
   },
   toast: {
     switchLangSuccess: 'Switch Language Success'

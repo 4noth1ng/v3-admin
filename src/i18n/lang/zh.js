@@ -31,7 +31,19 @@ export default {
     articleRanking: '文章排名',
     articleCreate: '创建文章',
     articleDetail: '文章详情',
-    articleEditor: '文章编辑'
+    articleEditor: '文章编辑',
+    components: '组件',
+    chooseIcon: '图标选择器',
+    trend: '趋势标记',
+    menu: '菜单',
+    choosearea: '地区选择器',
+    choosecity: '城市选择器',
+    choosedate: '日期选择器',
+    choosetime: '时间选择器',
+    form: '表单',
+    modalform: '弹出框表单',
+    progress: '进度条',
+    dragabletable: '可拖拽表格'
   },
   toast: {
     switchLangSuccess: '切换语言成功'

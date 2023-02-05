@@ -149,6 +149,108 @@ export const publicRoutes = [
         component: () => import('@/views/error-page/401')
       }
     ]
+  },
+  {
+    path: '/components',
+    name: 'components',
+    redirect: '/components/chooseIcon',
+    component: layout,
+    meta: {
+      title: 'components',
+      icon: 'article-ranking'
+    },
+    children: [
+      {
+        path: '/components/chooseicon',
+        name: 'chooseicon',
+        component: () => import('@/views/chooseIcon/index.vue'),
+        meta: {
+          title: 'chooseIcon',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/components/trend',
+        name: 'trend',
+        component: () => import('@/views/trend'),
+        meta: {
+          title: 'trend',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/components/menu',
+        name: 'menu',
+        component: () => import('@/views/menu'),
+        meta: {
+          title: 'menu',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/components/choosearea',
+        name: 'choosearea',
+        component: () => import('@/views/choose-area'),
+        meta: {
+          title: 'choosearea',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/components/choosecity',
+        name: 'choosecity',
+        component: () => import('@/views/choose-city'),
+        meta: {
+          title: 'choosecity',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/components/choosetime',
+        name: 'choosetime',
+        component: () => import('@/views/choose-time'),
+        meta: {
+          title: 'choosetime',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/components/progress',
+        name: 'progress',
+        component: () => import('@/views/progress'),
+        meta: {
+          title: 'progress',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/components/form',
+        name: 'form',
+        component: () => import('@/views/form'),
+        meta: {
+          title: 'form',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/components/modalform',
+        name: 'modalform',
+        component: () => import('@/views/modal-form'),
+        meta: {
+          title: 'modalform',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/components/dragabletable',
+        name: 'dragabletable',
+        component: () => import('@/views/dragable-table'),
+        meta: {
+          title: 'dragabletable',
+          icon: 'article-ranking'
+        }
+      }
+    ]
   }
 ]
 
