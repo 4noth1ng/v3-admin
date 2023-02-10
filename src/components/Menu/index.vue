@@ -7,6 +7,7 @@
     :router="router"
     :default-active="activeMenu"
     :collapse="isCollapse"
+    class="menu-container"
   >
     <template v-for="(item, index) in data">
       <el-menu-item
@@ -15,7 +16,9 @@
         :route="item"
       >
         <svgIcon :icon="item.meta.icon"></svgIcon>
-        <span>{{ generateTitle(item.meta.title) }}</span>
+        <template #title
+          ><span>{{ generateTitle(item.meta.title) }}</span></template
+        >
       </el-menu-item>
       <el-sub-menu v-else :index="item.path">
         <template #title>
@@ -73,5 +76,13 @@ console.log(props.data)
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
+}
+.menu-container {
+  :deep(.el-menu-tooltip__trigger) {
+    padding: 0 0 0 19px;
+  }
+  :deep(.el-sub-menu__title) {
+    padding: 0 0 0 19px;
+  }
 }
 </style>

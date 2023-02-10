@@ -43,7 +43,10 @@ export default {
     form: '表单',
     modalform: '弹出框表单',
     progress: '进度条',
-    dragabletable: '可拖拽表格'
+    dragabletable: '可拖拽表格',
+    filterabletable: '可筛选表格',
+    dashboard: '控制台',
+    numberscroll: '数字滚动'
   },
   toast: {
     switchLangSuccess: '切换语言成功'
@@ -194,5 +197,18 @@ export default {
     createSuccess: '文章创建成功',
     editorSuccess: '文章修改成功',
     sortSuccess: '文章排名修改成功'
+  },
+  welcome: {
+    back: '欢迎回来',
+    title:
+      '开源等于互助；开源需要大家一起来支持，支持的方式有很多种，比如使用、推荐、写教程、保护生态、贡献代码、回答问题、分享经验、打赏赞助等；欢迎您加入我们！',
+    text: '您已经工作了',
+    timeValidate: 'H小时m分钟s秒'
+  },
+  dashboard: {
+    one: '会员注册量',
+    two: '附件上传量',
+    three: '会员总数',
+    four: '已装插件数'
   }
 }

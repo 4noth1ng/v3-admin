@@ -139,6 +139,15 @@ export const publicRoutes = [
         }
       },
       {
+        path: '/dashboard',
+        name: 'dashboard',
+        component: () => import('@/views/dashBoard/index'),
+        meta: {
+          title: 'dashboard',
+          icon: 'eye-open'
+        }
+      },
+      {
         path: '/404',
         name: '404',
         component: () => import('@/views/error-page/404')
@@ -157,7 +166,7 @@ export const publicRoutes = [
     component: layout,
     meta: {
       title: 'components',
-      icon: 'article-ranking'
+      icon: 'tree'
     },
     children: [
       {
@@ -247,6 +256,24 @@ export const publicRoutes = [
         component: () => import('@/views/dragable-table'),
         meta: {
           title: 'dragabletable',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/components/filterabletable',
+        name: 'filterabletable',
+        component: () => import('@/views/filterable-table'),
+        meta: {
+          title: 'filterabletable',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/component/numberscroll',
+        name: 'numberscroll',
+        component: () => import('@/views/number-scroll'),
+        meta: {
+          title: 'numberscroll',
           icon: 'article-ranking'
         }
       }

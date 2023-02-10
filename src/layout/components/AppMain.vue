@@ -78,13 +78,17 @@ const test = () => {
 </script>
 
 <style lang="scss" scoped>
+@import '~@/styles/variables.module.scss';
+
 .app-main {
   min-height: calc(100vh - 50px - 43px);
+  height: auto;
   width: 100%;
   position: relative;
   overflow: hidden;
   padding: 104px 20px 20px 20px;
   box-sizing: border-box;
+  background-color: #f5f5f5;
 }
 /* fade-transform */
 .fade-transform-leave-active,

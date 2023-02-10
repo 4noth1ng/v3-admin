@@ -43,7 +43,10 @@ export default {
     form: 'Form',
     modalform: 'ModalForm',
     progress: 'Progress',
-    dragabletable: 'DragableTable'
+    dragabletable: 'DragableTable',
+    filterabletable: 'FilterableTable',
+    dashboard: 'DashBoard',
+    numberscroll: 'NumberScroll'
   },
   toast: {
     switchLangSuccess: 'Switch Language Success'
@@ -195,5 +198,17 @@ export default {
     createSuccess: 'The article was created successfully',
     editorSuccess: 'Article modified successfully',
     sortSuccess: 'Article ranking modified successfully'
+  },
+  welcome: {
+    back: 'Welcome back!',
+    title: `Open source equals mutual assistance, and needs everyone's support. There are many ways to support it, such as using, recommending, writing tutorials, protecting the ecology, contributing code, answering questions, sharing experiences, donation, sponsorship and so on. Welcome to join us!`,
+    timeValidate: 'H-m-s',
+    text: 'You have worked today: '
+  },
+  dashboard: {
+    one: 'Member registration',
+    two: 'Number of attachments upload',
+    three: 'Total number of members',
+    four: 'Number of installed plug-ins'
   }
 }

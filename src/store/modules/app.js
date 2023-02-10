@@ -5,11 +5,18 @@ export default {
   state: () => ({
     sidebarOpened: true,
     language: getItem(LANG) || 'zhCn',
-    tagsViewList: getItem(TAGS_VIEW) || []
+    tagsViewList: getItem(TAGS_VIEW) || [],
+    device: 'desktop'
   }),
   mutations: {
     triggerSidebarOpened(state) {
       state.sidebarOpened = !state.sidebarOpened
+    },
+    onSidebarAction(state, open) {
+      state.sidebarOpened = open
+    },
+    toggleDevice(state, device) {
+      state.device = device
     },
     /**
      * 设置国际化

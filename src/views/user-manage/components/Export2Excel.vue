@@ -26,7 +26,7 @@ import { ref } from 'vue'
 import { watchSwitchLang } from '@/utils/i18n'
 import { getUserManageAllList } from '@/api/user-manage'
 import { USER_RELATIONS } from './Export2ExcelConstants'
-import { dateFilter } from '@/filters'
+import {} from '@/filters'
 defineProps({
   modelValue: {
     type: Boolean,
