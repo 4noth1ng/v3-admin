@@ -7,6 +7,9 @@
       active-text="Super-admin"
       inactive-text="Tourist"
     />
+    <h3 style="margin-bottom: 20px">指令级权限</h3>
+    <el-button v-permission="['importUser']">importUser</el-button>
+    <el-button v-permission="['distributeRole']">distributeRole</el-button>
   </div>
 </template>
 
