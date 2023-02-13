@@ -40,7 +40,9 @@ export default {
       })
     },
     async getUserInfo(context) {
-      const data = await getUserInfo()
+      const data = await getUserInfo({
+        token: getItem('token')
+      })
       context.commit('setUserInfo', data)
       return data
     },

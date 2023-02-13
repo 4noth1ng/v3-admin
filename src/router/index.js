@@ -280,7 +280,63 @@ export const publicRoutes = [
     ]
   }
 ]
-
+/**
+ * 功能测试路由
+ */
+export const tsetRoutes = [
+  {
+    path: '/',
+    component: layout,
+    name: 'tsetRoutes',
+    children: [
+      {
+        path: '/colortheme',
+        name: 'colortheme',
+        component: () => import('@/views/color-theme'),
+        meta: {
+          title: 'colortheme',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/functiondriver',
+        name: 'functiondriver',
+        component: () => import('@/views/function-driver'),
+        meta: {
+          title: 'functiondriver',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/globalsearch',
+        name: 'globalsearch',
+        component: () => import('@/views/global-search'),
+        meta: {
+          title: 'globalsearch',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/i18n',
+        name: 'i18n',
+        component: () => import('@/views/i18n'),
+        meta: {
+          title: 'i18n',
+          icon: 'article-ranking'
+        }
+      },
+      {
+        path: '/powertest',
+        name: 'powertest',
+        component: () => import('@/views/power-test'),
+        meta: {
+          title: 'powertest',
+          icon: 'article-ranking'
+        }
+      }
+    ]
+  }
+]
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [...publicRoutes]
@@ -294,9 +350,11 @@ export const resetRouter = () => {
     store.getters.userInfo.permission &&
     store.getters.userInfo.permission.menus
   ) {
+    console.log(router.getRoutes())
     router.removeRoute('article')
     router.removeRoute('user')
-    router.removeRoute('404')
+    router.removeRoute('error')
+    router.removeRoute('tsetRoutes')
   }
 }
 export default router

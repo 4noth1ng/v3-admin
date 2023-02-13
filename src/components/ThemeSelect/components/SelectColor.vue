@@ -1,9 +1,23 @@
 <template>
   <el-dialog title="提示" :model-value="modelValue" @close="closed" width="22%">
     <div class="center">
-      <p class="title">{{ $t('msg.theme.themeColorChange') }}</p>
+      <p class="title">系统主题</p>
       <el-color-picker
         v-model="mColor"
+        :predefine="predefineColors"
+      ></el-color-picker>
+    </div>
+    <div class="center">
+      <p class="title">头部主题</p>
+      <el-color-picker
+        v-model="headerColor"
+        :predefine="predefineColors"
+      ></el-color-picker>
+    </div>
+    <div class="center">
+      <p class="title">内容主题</p>
+      <el-color-picker
+        v-model="appmainColor"
         :predefine="predefineColors"
       ></el-color-picker>
     </div>
@@ -22,9 +36,16 @@
 import { ref } from 'vue'
 import { useStore } from 'vuex'
 import { generateNewStyle, writeNewStyle } from '@/utils/theme'
+import variables from '@/styles/variables.module.scss'
+
 const store = useStore()
 // 默认色值
 const mColor = ref(store.getters.mainColor)
+// 头部（面包屑及顶部导航栏颜色）色值
+const headerColor = ref(store.getters.cssVar.navbarBg)
+// appmain部分color
+const appmainColor = ref(store.getters.cssVar.mainBgColor)
+
 defineProps({
   modelValue: {
     type: Boolean,
@@ -70,7 +91,11 @@ const comfirm = async () => {
   writeNewStyle(newStyleText)
   // 2. 保存最新的主题色
   store.commit('theme/setMainColor', mColor.value)
+  store.commit('theme/setHeaderColor', headerColor.value)
+  store.commit('theme/setAppColor', appmainColor.value)
   // 3. 关闭 dialog
+
+  console.log(variables)
   closed()
 }
 </script>

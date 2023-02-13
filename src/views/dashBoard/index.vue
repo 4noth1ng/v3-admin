@@ -14,7 +14,12 @@
           </div>
         </div>
       </el-col>
-      <el-col :xs="0" :sm="4" :lg="6">
+      <el-col
+        :xs="0"
+        :sm="4"
+        :lg="6"
+        style="display: flex; justify-content: center"
+      >
         <div class="working-container">
           <img
             src="../../assets/微信截图_20230209154451.png"

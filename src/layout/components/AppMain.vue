@@ -88,7 +88,6 @@ const test = () => {
   overflow: hidden;
   padding: 104px 20px 20px 20px;
   box-sizing: border-box;
-  background-color: #f5f5f5;
 }
 /* fade-transform */
 .fade-transform-leave-active,

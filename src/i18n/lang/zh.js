@@ -46,7 +46,12 @@ export default {
     dragabletable: '可拖拽表格',
     filterabletable: '可筛选表格',
     dashboard: '控制台',
-    numberscroll: '数字滚动'
+    numberscroll: '数字滚动',
+    colortheme: '颜色主题',
+    functiondriver: '引导页',
+    globalsearch: '全局搜索',
+    i18n: '国际化',
+    powertest: '权限测试'
   },
   toast: {
     switchLangSuccess: '切换语言成功'
@@ -210,5 +215,8 @@ export default {
     two: '附件上传量',
     three: '会员总数',
     four: '已装插件数'
+  },
+  tip: {
+    i18n: '基于vue-i18n'
   }
 }

@@ -64,11 +64,11 @@ const logout = () => {
 </script>
 
 <style lang="scss" scoped>
+@import '~@/styles/variables.module.scss';
 .navbar {
   height: 50px;
   overflow: hidden;
   position: relative;
-  background: #fff;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
   .breadcrumb-container {
     float: left;

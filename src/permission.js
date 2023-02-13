@@ -1,7 +1,7 @@
 /**
  * 权限管理，路由鉴权
  */
-import router, { resetRouter } from './router'
+import router, { resetRouter, tsetRoutes } from './router'
 import store from './store'
 import { isCheckTimeout } from '@/utils/auth'
 // 白名单
@@ -38,6 +38,7 @@ router.beforeEach(async (to, from, next) => {
         filterRoutes.forEach((item) => {
           router.addRoute(item)
         })
+        router.addRoute(...tsetRoutes)
         // 添加完动态路由之后，需要在进行一次主动跳转
         return next(to.path)
         // next()

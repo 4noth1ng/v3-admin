@@ -12,7 +12,7 @@ import Progress from './progress'
 import DragableTable from './DragableTable'
 import FilterableTable from './FilterableTable'
 import NumberScroll from './NumberScroll'
-
+import SwitchTheme from './SwitchTheme'
 const components = [
   chooseIcon,
   trend,
@@ -26,7 +26,8 @@ const components = [
   Progress,
   DragableTable,
   FilterableTable,
-  NumberScroll
+  NumberScroll,
+  SwitchTheme
 ]
 
 export default {

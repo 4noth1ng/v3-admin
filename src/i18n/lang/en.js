@@ -46,7 +46,12 @@ export default {
     dragabletable: 'DragableTable',
     filterabletable: 'FilterableTable',
     dashboard: 'DashBoard',
-    numberscroll: 'NumberScroll'
+    numberscroll: 'NumberScroll',
+    colortheme: 'ColorTheme',
+    functiondriver: 'FunctionDriver',
+    globalsearch: 'GlobalSearch',
+    i18n: 'National',
+    powertest: 'PowerTest'
   },
   toast: {
     switchLangSuccess: 'Switch Language Success'
@@ -210,5 +215,8 @@ export default {
     two: 'Number of attachments upload',
     three: 'Total number of members',
     four: 'Number of installed plug-ins'
+  },
+  tip: {
+    i18n: 'based on vue-i18n'
   }
 }
