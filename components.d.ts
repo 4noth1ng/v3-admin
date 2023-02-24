@@ -64,7 +64,7 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     Screenfull: typeof import('./src/components/Screenfull/index.vue')['default']
     SelectColor: typeof import('./src/components/ThemeSelect/components/SelectColor.vue')['default']
-    Src: typeof import('./src/components/ChooseTime/src/index.vue')['default']
+    Src: typeof import('./src/components/ChooseDate/src/index.vue')['default']
     SvgIcon: typeof import('./src/components/SvgIcon/index.vue')['default']
     TagsView: typeof import('./src/components/TagsView/index.vue')['default']
     ThemeSelect: typeof import('./src/components/ThemeSelect/index.vue')['default']
